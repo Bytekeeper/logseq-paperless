@@ -1,0 +1,31 @@
+{
+  "name": "logseq-plugin-paperless",
+  "version": "0.1.0",
+  "description": "Insert links to paperless-ngx saved views and documents from Logseq.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite build --watch",
+    "build": "tsc --noEmit && vite build",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "coverage": "vitest run --coverage"
+  },
+  "logseq": {
+    "id": "logseq-plugin-paperless",
+    "title": "Paperless-ngx Links",
+    "icon": "./logo.svg",
+    "main": "dist/index.html"
+  },
+  "dependencies": {
+    "@logseq/libs": "^0.0.17"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "@vitest/coverage-v8": "1.6.1",
+    "jsdom": "^24.1.0",
+    "typescript": "^5.5.0",
+    "vite": "^5.3.0",
+    "vite-plugin-logseq": "^1.1.2",
+    "vitest": "^1.6.0"
+  }
+}

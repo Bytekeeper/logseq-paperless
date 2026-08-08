@@ -1,0 +1,104 @@
+.paperless-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.paperless-picker {
+  width: 800px;
+  max-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--ls-primary-background-color, #fff);
+  color: var(--ls-primary-text-color, #111);
+  border: 1px solid var(--ls-border-color, #ccc);
+  border-radius: 8px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  font-size: 14px;
+}
+
+.paperless-picker-header {
+  display: flex;
+  align-items: stretch;
+  border-bottom: 1px solid var(--ls-border-color, #ccc);
+}
+
+.paperless-picker-input {
+  flex: 1 1 auto;
+  min-width: 0;
+  padding: 10px 12px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  background: transparent;
+  color: inherit;
+}
+
+.paperless-picker-close {
+  flex: 0 0 auto;
+  width: 40px;
+  border: none;
+  border-left: 1px solid var(--ls-border-color, #ccc);
+  background: transparent;
+  color: inherit;
+  font-size: 16px;
+  line-height: 1;
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.paperless-picker-close:hover {
+  opacity: 1;
+  background: var(--ls-tertiary-background-color, rgba(127, 127, 127, 0.15));
+}
+
+.paperless-picker-list {
+  list-style: none;
+  margin: 0;
+  padding: 4px 0;
+  overflow-y: auto;
+}
+
+.paperless-picker-item {
+  padding: 8px 12px;
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.paperless-picker-item.is-highlighted {
+  background: var(--ls-active-primary-color, #2b6cb0);
+  color: #fff;
+}
+
+.paperless-picker-item--doc {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.paperless-picker-thumb {
+  flex: 0 0 auto;
+  width: 540px;
+  height: 360px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 6px;
+  background: var(--ls-tertiary-background-color, rgba(127, 127, 127, 0.15));
+}
+
+.paperless-picker-item--thumb-failed .paperless-picker-thumb {
+  visibility: hidden;
+}
+
+.paperless-picker-label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  font-size: 16px;
+}
