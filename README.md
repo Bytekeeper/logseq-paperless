@@ -2,6 +2,8 @@
 
 Insert links to your [paperless-ngx](https://docs.paperless-ngx.com/) saved views and documents directly from Logseq, via slash commands.
 
+![Demo: inserting a document link and a saved view link via slash commands](demo.gif)
+
 ## Status
 
 - ✅ `/Paperless: Insert Saved View Link` — pick one of your paperless-ngx saved views from a searchable popup, insert a markdown link to it.
