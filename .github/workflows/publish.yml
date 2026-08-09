@@ -1,0 +1,42 @@
+name: Release Plugin
+
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    env:
+      PLUGIN_NAME: logseq-plugin-paperless
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: yarn
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Build
+        run: yarn build
+
+      - name: Package
+        run: |
+          mkdir "$PLUGIN_NAME"
+          cp README.md package.json logo.svg "$PLUGIN_NAME"/
+          cp -r dist "$PLUGIN_NAME"/dist
+          zip -r "$PLUGIN_NAME.zip" "$PLUGIN_NAME"
+
+      - name: Create Release
+        uses: ncipollo/release-action@v1
+        with:
+          artifacts: ${{ env.PLUGIN_NAME }}.zip
+          allowUpdates: true
+          draft: false
+          prerelease: false
