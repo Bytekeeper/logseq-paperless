@@ -20,12 +20,13 @@
     "@logseq/libs": "^0.0.17"
   },
   "devDependencies": {
-    "@types/node": "^20.14.0",
-    "@vitest/coverage-v8": "1.6.1",
-    "jsdom": "^24.1.0",
-    "typescript": "^5.5.0",
-    "vite": "^6.4.3",
+    "@types/node": "^26.2.0",
+    "@vitest/coverage-v8": "^4.1.10",
+    "esbuild": "^0.28.2",
+    "jsdom": "^30.0.1",
+    "typescript": "^7.0.2",
+    "vite": "^8.2.1",
     "vite-plugin-logseq": "^1.1.2",
-    "vitest": "^1.6.0"
+    "vitest": "^4.1.10"
   }
 }
